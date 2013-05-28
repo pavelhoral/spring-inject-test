@@ -9,13 +9,8 @@
 
     <context:component-scan base-package="cz.pavelhoral"/>
 
-    <bean id="myDependency" class="cz.pavelhoral.MyDependencyImpl" />
+	<bean class="cz.pavelhoral.MyPostProcessor">
+		<property name="myClass" ref="myClass" />
+	</bean>
 
-    <bean id="someOtherBean" class="cz.pavelhoral.SomeOtherBeanImpl">
-        <property name="listOfMyBeans">
-            <list>
-                <ref bean="myClass" />
-            </list>
-        </property>
-    </bean>
 </beans>

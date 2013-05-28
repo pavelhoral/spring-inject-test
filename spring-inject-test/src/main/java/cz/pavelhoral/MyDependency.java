@@ -1,5 +1,8 @@
 package cz.pavelhoral;
 
-public interface MyDependency {
+import org.springframework.stereotype.Component;
+
+@Component
+public class MyDependency {
 
 }
